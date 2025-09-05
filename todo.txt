@@ -1,0 +1,17 @@
+1. create the grid layout for the 3 states ( pending, inprogress, done)
+2. create a simple add task modal
+3. create a fucntion to add the task to the grid
+4. create a function to delete the task from the grid
+5. create a function to edit the task
+6. add the drag and drop feature to move the tasks from one grid column to another
+7. update the state of the task based on the column which it is dropped to
+
+
+
+Kanban Board (Drag & Drop)
+
+Implement a draggable Kanban board (e.g., To Do, In Progress, Done).
+
+Save board state to Laravel backend.
+
+Look for: state management, UX design, API syncing.

@@ -6,6 +6,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import { HTML5Backend } from "react-dnd-html5-backend";
+import { DndProvider } from "react-dnd";
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -33,7 +35,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <DndProvider backend={HTML5Backend}>{children}</DndProvider>
+
         <ScrollRestoration />
         <Scripts />
       </body>
