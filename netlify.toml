@@ -1,3 +1,7 @@
+[build]
+  publish = "build"  # Or "dist" or whatever your build folder is called
+  command = "npm run build" # Or "yarn build"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
