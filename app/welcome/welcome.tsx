@@ -214,6 +214,7 @@ export function HomeComponent() {
         <EditTaskModal
           handleEditTask={handleEditTask}
           setOpenModal={setOpenModal}
+          currentTask={activeTask}
         />
       )}
     </main>

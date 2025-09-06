@@ -1,21 +1,25 @@
 import { useState } from "react";
-import type { ModalStates } from "~/types";
+import type { ModalStates, Task } from "~/types";
 
 export const EditTaskModal = ({
   handleEditTask,
   setOpenModal,
+  currentTask,
 }: {
   handleEditTask: (taskDescription: string) => void;
   setOpenModal: React.Dispatch<React.SetStateAction<ModalStates>>;
+  currentTask: Task | null;
 }) => {
-  const [taskDescription, setTaskDescription] = useState<string>("");
+  const [taskDescription, setTaskDescription] = useState<string>(
+    currentTask?.task || ""
+  );
 
   return (
     <div className="fixed inset-0 z-10 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-200 w-full">
+      <div className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-200 w-full max-w-md">
         <h6 className="text-sm text-gray-800">Edit Task</h6>
-        <input
-          className="w-full p-2 rounded-lg border-2 border-gray-400"
+        <textarea
+          className="w-full p-2 rounded-lg border-2 border-gray-400 text-black"
           value={taskDescription}
           onChange={(e) => setTaskDescription(e.target.value)}
         />
